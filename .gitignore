@@ -59,3 +59,8 @@ typings/
 
 # next.js build output
 .next
+star-wars-api/star-wars.sublime-workspace
+star-wars-api/.vs/star-wars-api/v15/.suo
+star-wars-api/.vs/slnx.sqlite
+star-wars-api/.vs/VSWorkspaceState.json
+star-wars-api/.vs/ProjectSettings.json
