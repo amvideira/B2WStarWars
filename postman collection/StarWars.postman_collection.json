@@ -1,0 +1,157 @@
+{
+	"info": {
+		"name": "StarWars",
+		"_postman_id": "7f715725-b1de-ebcf-17d0-d8dc53de9651",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Planets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:4000/starwarsplanets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"starwarsplanets"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePlanet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\": \"PlanetaTeste 3\",\n\t\"ClimeType\": \"Umido\",\n\t\"TerrainType\": \"Oceanico\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/starwarsplanets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"starwarsplanets"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar Planeta",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\": \"PlanetaTeste\",\n\t\"ClimeType\": \"Muito quente 2\",\n\t\"TerrainType\": \"Arenoso\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/starwarsplanets/5c151752bd3cff0f285d37bc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"starwarsplanets",
+						"5c151752bd3cff0f285d37bc"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Planet Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:4000/starwarsplanets/5c151752bd3cff0f285d37bc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"starwarsplanets",
+						"5c151752bd3cff0f285d37bc"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Destroy Planet",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:4000/starwarsplanets/5c15189bbd3cff0f285d37be",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"starwarsplanets",
+						"5c15189bbd3cff0f285d37be"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PlanetDetails byName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:4000/starwarsplanets/findbyname/PlanetaTeste",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"starwarsplanets",
+						"findbyname",
+						"PlanetaTeste"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
