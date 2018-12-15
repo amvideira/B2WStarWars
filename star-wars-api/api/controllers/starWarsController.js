@@ -1,4 +1,4 @@
-var Request = require("request");
+
 var mongoose = require('mongoose'),
   StarWarsPlanet = mongoose.model('StarWarsPlanets');
 
@@ -9,28 +9,24 @@ exports.findElement = function(arr, propName, propValue) {
 }
 
 exports.listAll = function(req, res) {
-
-  //console.log(global.starwarsPlanetsFromSwapi);
-  StarWarsPlanet.find({}, function (err, planet) {
+  StarWarsPlanet.find({}, function (err, planets) {
       if (err)
           res.send(err);
 
       if (global.starwarsPlanetsFromSwapi != null && global.starwarsPlanetsFromSwapi.count > 0) {
-          for (var myKey in planet) {
+          for (var myKey in planets) {
 
               var planetFromSwapi = exports.findElement(global.starwarsPlanetsFromSwapi.results, "name"
-                  , planet[myKey].Name);
+                  , planets[myKey].Name);
 
               if (planetFromSwapi != null) {
                   var i = planetFromSwapi.films.length;
 
-                  planet[myKey].FilmApparitionCount = i;
+                  planets[myKey].FilmApparitionCount = i;
               }
           }
-
-          //console.log("key:" + myKey + ", value:" + planet[myKey].Name);
     }
-    res.json(planet);
+    res.json(planets);
   });
 };
 
