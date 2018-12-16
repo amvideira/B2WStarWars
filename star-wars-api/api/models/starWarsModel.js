@@ -19,14 +19,6 @@ var StarWarsPlanetsSchema = new Schema({
     FilmApparitionCount: {
         type: Number
     }
-  /*,
-  status: {
-    type: [{
-      type: String,
-      enum: ['pending', 'ongoing', 'completed']
-    }],
-    default: ['pending']
-  }*/
 });
 
 module.exports = mongoose.model('StarWarsPlanets', StarWarsPlanetsSchema);
