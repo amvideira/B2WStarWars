@@ -73,7 +73,7 @@ exports.updatePlanet = function(req, res) {
 
 
 exports.destroyPlanet = function(req, res) {
-  StarWarsPlanet.remove({
+    StarWarsPlanet.deleteOne({
     _id: req.params.planetId
   }, function(err, planet) {
     if (err)
