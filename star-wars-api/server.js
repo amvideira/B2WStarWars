@@ -12,7 +12,7 @@ global.starwarsPlanetsFromSwapi = [];
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://TesteGmap:Greatlasher01!!@clusterteste-zsnff.azure.mongodb.net/StarWars'); 
+mongoose.connect('mongodb+srv://*****:******@clusterteste-zsnff.azure.mongodb.net/StarWars'); 
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
